@@ -12,7 +12,7 @@ var requisicoesRouter = require('./routes/requisicoes');
 var estoqueRouter = require('./routes/estoque');
 var usuariosRouter = require('./routes/usuarios');
 var produtosRouter = require('./routes/produtos');
-var cadFornecedorRouter = require('./routes/cadFornecedor')
+const cadastroFornecedorController = require('./controllers/cadFornecedorController');
 
 
 var app = express();
