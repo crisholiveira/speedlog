@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de fornecedor</title>
+
+    <link rel="stylesheet" href="/stylesheets/cadFornecedor.css">
+    <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/header.ejs') %>
+<body>
+       
+    <div class="container">
+        <div class="card">
+            <h1>Cadastro de novos fornecedores</h1>
+
+            <div class="label-float">
+                <input type="text" name="nome" id="nome" placeholder=" ">
+                <label for="nome">Nome da empresa</label>
+            </div>
+
+            <div class="label-float">
+                <input type="number" name="sap" id="sap" placeholder=" ">
+                <label for="sap">CNPJ</label>
+            </div>
+
+            <div class="label-float">
+                <input type="email" name="email" id="email" placeholder=" ">
+                <label for="email">Tipo de produto</label>
+            </div>  
+
+            <div class="justfy-center">
+                <button>Cadastrar</button>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
