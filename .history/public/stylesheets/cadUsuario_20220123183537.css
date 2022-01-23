@@ -5,6 +5,12 @@
 
 body{
     background-color: rgb(208, 214, 214);
+    /*
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
 }
 
 .container{
@@ -12,7 +18,7 @@ body{
     justify-content: center;
     width: 100%;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .card{
