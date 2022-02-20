@@ -1,18 +1,16 @@
 const { DataType } = require("sequelize/types");
 
 module.exports = (sequelize, DataType) => {
-    const Status = sequelize.define('status',{
-        id_status:{
+    const Prduto = sequelize.define('Produto',{
+        id:{
             type:DataType.INTERGER,
             primaryKey: true,
             autoIncrement: true
         },
-         tipo_status: DataType.STRING 
+        codigo: DataType.INTERGER,
+        nome: DataType.STRING,
+        tableName: 'produto'
     })
 
-    return Status;
+    return Produto;
 };
-        
-    
-
-//NÃO TERMINEI
