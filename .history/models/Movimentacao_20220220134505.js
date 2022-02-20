@@ -13,6 +13,7 @@ module.exports = (sequelize, DataType) => {
         qtd_saida: DataType.INTERGER,
         qtd_ajuste: DataType.INTERGER,
         tableName: 'movimentacao'
+
     })
 
     return Movimentacao;

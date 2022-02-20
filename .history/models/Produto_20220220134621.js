@@ -9,7 +9,7 @@ module.exports = (sequelize, DataType) => {
         },
         codigo: DataType.INTERGER,
         nome: DataType.STRING,
-        tableName: 'produto'
+        tableName: 'Produto'
     })
 
     return Produto;
