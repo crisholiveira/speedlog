@@ -8,10 +8,7 @@ module.exports = (sequelize, DataType) => {
             autoIncrement: true
         },
          tipo_status: DataType.STRING 
-    })
-
-    return Status;
-};
+    })}
         
     
 
