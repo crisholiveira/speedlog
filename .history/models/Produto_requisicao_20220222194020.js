@@ -18,7 +18,7 @@ module.exports = (sequelize, DataType) => {
         }},
 
         {tableName: 'produto_requisicao'}
-    );
+    )
 
     return Produto_requisicao;
 };

@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataType) => {
-    const Movimentacao_requisicao = sequelize.define('Movimentacao_requisicao',{
+    const Movimentacao = sequelize.define('movimentacao_requisicao',{
         id:{
             type:DataType.INTEGER,
             primaryKey: true,
@@ -8,15 +8,14 @@ module.exports = (sequelize, DataType) => {
         },
         movimentacao_id:{
             type: DataType.INTEGER
-            
+            //colocar aqui referencia da chave estrangeira
         },
         requisicao_id: {
             type: DataType.INTEGER,
-        },
-        },{
-        tableName: 'movimentacao_requisicao'              
-    
+            //colocar aqui referencia da chave estrangeira
+        tableName: 'movimentacao_requisicao'
+        }
     })
 
-    return Movimentacao_requisicao;
+    return Movimentacao;
 };

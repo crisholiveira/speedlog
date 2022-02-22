@@ -1,24 +1,21 @@
-const { DataType } = require("sequelize/types");
 
 module.exports = (sequelize, DataType) => {
-    const Produto_requisicao = sequelize.define('produto_requisicao',{
+    const Movimentacao = sequelize.define('movimentacao_requisicao',{
         id:{
             type:DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        requisicoes_id: {
+        movimentacao_id:{
             type: DataType.INTEGER
             
         },
-        produtos_id:{
+        requisicao_id: {
             type: DataType.INTEGER,
             
-        
-        }},
+        tableName: 'movimentacao_requisicao'
+        }
+    })
 
-        {tableName: 'produto_requisicao'}
-    );
-
-    return Produto_requisicao;
+    return Movimentacao;
 };
