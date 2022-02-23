@@ -1,5 +1,3 @@
-const { DataType } = require("sequelize/types");
-
 module.exports = (sequelize, DataType) => {
     const Movimentacao = sequelize.define('Movimentacao',{
         id:{
@@ -14,7 +12,8 @@ module.exports = (sequelize, DataType) => {
         qtd_ajuste: DataType.INTEGER,
         tableName: 'movimentacao'
     },{
-        tableName: 'movimentacao'
+        tableName: 'movimentacao',
+        timestamps: false
         }
     );
 
