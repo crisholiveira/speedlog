@@ -13,7 +13,9 @@ module.exports = (sequelize, DataType) => {
         qtd_saida: DataType.INTEGER,
         qtd_ajuste: DataType.INTEGER,
         tableName: 'movimentacao'
-    }
+    },{
+        tableName: 'movimentacao'
+        }
     );
 
     Movimentacao.associate = (models) => {
@@ -23,3 +25,5 @@ module.exports = (sequelize, DataType) => {
 
     return Movimentacao;
 };
+
+//não terminei

@@ -20,3 +20,5 @@ module.exports = (sequelize, DataType) => {
 
     return Movimentacao_requisicao;
 };
+
+//não terminei

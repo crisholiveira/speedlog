@@ -15,3 +15,4 @@ module.exports = (sequelize, DataType) => {
         
     
 
+//não terminei

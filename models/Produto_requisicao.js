@@ -22,3 +22,5 @@ module.exports = (sequelize, DataType) => {
 
     return Produto_requisicao;
 };
+
+//não terminei
