@@ -1,3 +1,5 @@
+const { DataType } = require("sequelize/types");
+
 module.exports = (sequelize, DataType) => {
     const Produto_requisicao = sequelize.define('produto_requisicao',{
         id:{
@@ -16,9 +18,7 @@ module.exports = (sequelize, DataType) => {
         }},
 
         {tableName: 'produto_requisicao'}
-    );
+    )
 
     return Produto_requisicao;
 };
-
-//não terminei

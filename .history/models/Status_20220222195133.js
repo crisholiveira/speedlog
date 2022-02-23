@@ -1,7 +1,9 @@
+const { DataType } = require("sequelize/types");
+
 module.exports = (sequelize, DataType) => {
     const Status = sequelize.define('status',{
         id_status:{
-            type:DataType.INTEGER,
+            type:DataType.INTERGER,
             primaryKey: true,
             autoIncrement: true
         },
@@ -13,4 +15,3 @@ module.exports = (sequelize, DataType) => {
         
     
 
-//não terminei

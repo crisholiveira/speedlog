@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataType) => {
-    const Movimentacao_requisicao = sequelize.define('Movimentacao_requisicao',{
+    const Movimentacao_requisicao = sequelize.define('movimentacao_requisicao',{
         id:{
             type:DataType.INTEGER,
             primaryKey: true,
@@ -20,5 +20,3 @@ module.exports = (sequelize, DataType) => {
 
     return Movimentacao_requisicao;
 };
-
-//não terminei
