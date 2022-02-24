@@ -16,9 +16,14 @@ module.exports = (sequelize, DataType) => {
         },{
         tableName: 'movimentacao_requisicao'              
     
-    })
+    });  
+    
 
     return Movimentacao_requisicao;
 };
 
 //não terminei
+
+
+
+//Não precisa desse model

@@ -26,3 +26,11 @@ module.exports = (sequelize, DataType) => {
 };
 
 //não terminei
+
+
+Movimentacao.associate = (models) => {
+    Movimentacao.belongsTo(models.Movimentacao_requisicao,{
+        as:'movimentacao_requisicao',
+        foreignKey:'???'
+    })
+}

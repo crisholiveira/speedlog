@@ -15,10 +15,24 @@ module.exports = (sequelize, DataType) => {
     });
 
     Requisicao.associate = (models) => {
-        Requisicao.belongsToMany(models.Movimentacao,{through: models.Movimentacao_requisicao})
+        Requisicao.belongsToMany(models.Movimentacao,
+            {   as:'movimentacao',
+                through: 'movimentacao_requisicao',
+                foreignKey: 'requisicao_id',
+                otherKey: 'movimentacao_id',
+                timestamps: false
+            }
+        ),
+        Requisicao.belongsToMany(models.Produto,{
+            as: 'produto',
+            through: 'produto_requisicao',
+            foreignKey: 'requisicoes_id',
+            otherKey: 'produtos_id',
+            timestamps: false
+        })
+
     }
 
     return Requisicao;
 }
 
-//não terminei
