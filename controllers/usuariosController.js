@@ -4,4 +4,4 @@ const usuariosController = {
         res.render('usuarios')
     }
 }
-module.exports = usuariosController
+module.exports = usuariosController;

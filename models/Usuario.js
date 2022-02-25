@@ -10,8 +10,10 @@ module.exports = (sequelize, DataType) => {
         setor: DataType.STRING,
         ativo: DataType.INTEGER,
         perfil: DataType.STRING,
-        senha: DataType.STRING,
-        tableName: 'usuarios'
+        senha: DataType.STRING
+    },{
+        tableName: 'usuarios',
+        timestamps: false
     })
 
     return Usuario;
