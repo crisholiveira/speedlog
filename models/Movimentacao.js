@@ -18,7 +18,14 @@ module.exports = (sequelize, DataType) => {
     );
 
     Movimentacao.associate = (models) => {
-        Movimentação.belongsToMany(models.Requisicao,{through: models.Movimentacao_requisicao})
+        Movimentacao.belongsToMany(models.Requisicao,
+            {   as:'requisicao',
+                through: 'movimentacao_requisicao',
+                foreignKey: 'movimentacao_id',
+                otherKey: 'requisicao_id',
+                timestamps: false
+            }
+        );
     }
 
 
@@ -28,9 +35,6 @@ module.exports = (sequelize, DataType) => {
 //não terminei
 
 
-Movimentacao.associate = (models) => {
-    Movimentacao.belongsTo(models.Movimentacao_requisicao,{
-        as:'movimentacao_requisicao',
-        foreignKey:'???'
-    })
-}
+
+
+

@@ -7,8 +7,11 @@ module.exports = (sequelize, DataType) => {
         },
         codigo: DataType.INTEGER,
         nome: DataType.STRING,
-        tableName: 'produto'
-    });
+        
+    }, { tableName: 'produtos',
+        timestamps: false
+    }
+    );
         Produto.associate = (models) => {
             Produto.belongsToMany(models.Requisicao,
                 {   as:'requisicao',
