@@ -1,12 +1,15 @@
 module.exports = (sequelize, DataType) => {
     const Status = sequelize.define('status',{
-        id_status:{
+        id:{
             type:DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-         tipo_status: DataType.STRING 
-    })
+         estatus: DataType.STRING,
+    },{
+        tableName: 'status_requisicao'
+    }
+    )
 
     return Status;
 };
