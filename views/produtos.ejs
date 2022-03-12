@@ -1,13 +1,38 @@
 <%- include('./partials/header.ejs') %>
-<body>
-    <h1>Listagem de produtos:</h1>
 
-    <ul>
+    <link rel="stylesheet" href="/stylesheets/produtos.css">
+
+    <body>
+        <div class="container-principal">
+            <h1>Listagem de produtos:</h1>
+
+
+            <table class="tabela">
+
+                <tr>
+                    <th>Código</th>
+                    <th>Nome do produto</th>
+                </tr>
+                <% produtos.forEach(produto=> { %>
+                    <tr>
+                        <td>
+                            <%= produto.codigo %>
+                        </td>
+                        <td>
+                            <%= produto.nome %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </table>
+
+            <!--
+
+<ul>
         <% produtos.forEach(produto => { %>
             <li>
                 <%= produto.nome %>
             </li>
         <% }) %>
-    </ul>
-
-</body>
+    </ul> -->
+        </div>
+    </body>

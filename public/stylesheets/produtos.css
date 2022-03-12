@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Poppins'
+}
+
+.container-principal {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+
+}
+h1 {
+    padding: 15px;
+}
+
+.tabela {
+    border: solid 1px black;
+}
+
+.tabela td {
+    border: solid 1px black;
+    padding: 10px;
+}
+.tabela th {
+    border: solid 1px black;
+    padding: 10px;
+}

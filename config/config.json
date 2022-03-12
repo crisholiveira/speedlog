@@ -1,23 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "905070",
-    "database": "db_speedlog",
-    "host": "localhost",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": "905070",
-    "database": "db_speedlog",
-    "host": "localhost",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": "905070",
+    "password": "",
     "database": "db_speedlog",
     "host": "localhost",
     "dialect": "mysql"
   }
+ 
 }
