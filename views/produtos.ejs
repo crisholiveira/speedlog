@@ -5,13 +5,15 @@
     <body>
         <div class="container-principal">
             <h1>Listagem de produtos:</h1>
-
-
+            <form action="/produtos/search" class="formulario" method="get">
+                <input type="text" placeholder="Pesquise um produto" name="key">
+                <button type="submit">Buscar</button>
+            </form>
             <table class="tabela">
-
                 <tr>
                     <th>Código</th>
                     <th>Nome do produto</th>
+                    <th>Ações</th>
                 </tr>
                 <% produtos.forEach(produto=> { %>
                     <tr>
@@ -21,18 +23,9 @@
                         <td>
                             <%= produto.nome %>
                         </td>
+                        <td><a href="/produtos/ver/<%= produto.id %>" class="botao">Editar</a></td>
                     </tr>
                     <% }) %>
             </table>
-
-            <!--
-
-<ul>
-        <% produtos.forEach(produto => { %>
-            <li>
-                <%= produto.nome %>
-            </li>
-        <% }) %>
-    </ul> -->
         </div>
     </body>

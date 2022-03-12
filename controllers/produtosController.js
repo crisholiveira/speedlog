@@ -1,4 +1,6 @@
-const { Produto } = require ('../models')
+const { Produto, sequelize } = require ('../models')
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 
 
 const produtosController = {
@@ -7,10 +9,29 @@ const produtosController = {
         
             return res.render('produtos', {produtos})            
         
+    },
+    findByCod: async (req, res) => {
+        let {id} = req.params;
+        let produto = await Produto.findOne({
+            where: {
+                id: id
+            }
+        })
+        return res.render('editarProdutos', {produto})
+    },
+    search: async (req, res) => {
+        let {key} = req.query;
+        let produtos = await Produto.findAll({
+            where: {
+                nome:{
+                    [Op.like]:`%${key}%`   
+                           }
+            }
+            
+        })
+        return res.render('produtos', {produtos})     
     }
 }
 module.exports = produtosController
 
-//Aqui a ideia é enviar uma lista de todos os produtos
 
-//Também preciso fazer uma verificação usando then().catch()
