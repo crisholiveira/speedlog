@@ -15,6 +15,21 @@ const produtosController = {
         return res.render('produtos', { produtos, totalPagina })
 
     },
+    create: (req,res) => {
+
+        return res.render('cadastroProduto')
+    },
+    store: async (req, res) => {
+        const { codigo, nome } = req.body;
+        const inclusao = await Produto.create({
+            codigo,
+            nome
+        });
+        console.log(inclusao)
+        return res.redirect('/produtos')
+
+    },
+
     findByCod: async (req, res) => {
         let { id } = req.params;
         let produto = await Produto.findOne({
@@ -22,22 +37,21 @@ const produtosController = {
                 id: id
             }
         })
-        return res.render('editarProdutos', { produto })
+        return res.render('consultarProdutos', { produto })
     },
     search: async (req, res) => {
+        let { page = 1 } = req.query
         let { key } = req.query;
-        let produtos = await Produto.findAll({
+        let { count: total, rows: produtos } = await Produto.findAndCountAll({
             where: {
-                nome: {
-                    [Op.like]: `%${key}%`
-                }
-            },
-            order: [
-                [`nome`, `ASC`]
-            ]
+                nome: { [Op.like]: `%${key}%`}},
+            order: [[`nome`, `ASC`]],
+            limit: 10,
+            offset: (page - 1) * 10
+        })       
+        let totalPagina = Math.round(total / 10)
+        return res.render('produtos', { produtos, totalPagina })       
 
-        })
-        return res.render('produtos', { produtos })
     }
 }
 module.exports = produtosController

@@ -5,10 +5,12 @@
 
     <body>
         <div class="pesquisa">
-            <h1>Listagem de produtos:</h1>
+            <h1>LISTAGEM DE PRODUTOS</h1>
             <form action="/produtos/search" class="formulario" method="get">
                 <input type="text" placeholder="Pesquise um produto" name="key">
                 <input type="submit" value="Buscar">
+                <input id="adicionar" type="submit" value="Adicionar">
+                <input id="resetar" type="reset" value="Limpar">
             </form>
         </div>
 
@@ -28,7 +30,7 @@
                         <td>
                             <%= produto.nome %>
                         </td>
-                        <td><a href="/produtos/ver/<%= produto.id %>" class="botao">Editar</a></td>
+                        <td><a href="/produtos/ver/<%= produto.id %>" class="botao">Ver</a></td>
                     </tr>
                     <% }) %>
             </table>
@@ -41,4 +43,5 @@
                 </ul>
             </nav>
         </div>
+        <script src="/js/jsProdutos.js"></script>
     </body>

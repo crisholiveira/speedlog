@@ -10,9 +10,10 @@
 }
 
 .pesquisa {
-    width: 400px;
+    width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .container-principal {
@@ -76,6 +77,9 @@ input[type="submit"] {
     color: white;
     background-color: #099c22;
     cursor: pointer;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type="submit"]:hover {
@@ -83,7 +87,26 @@ input[type="submit"]:hover {
     transition: 5s;
 }
 
+input[type="reset"] {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: white;
+    background-color: #099c22;
+    cursor: pointer;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+input[type="reset"]:hover {
+    background-color: #1d792c;
+    transition: 5s;
+}
 
 .pageItem {
     display: inline-block;
