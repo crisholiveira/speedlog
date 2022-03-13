@@ -9,27 +9,86 @@
     font-family: 'Poppins'
 }
 
-.container-principal {
+.pesquisa {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-   
+}
 
-
+.container-principal {
+    margin: 50px;
+    
 }
 h1 {
     padding: 15px;
 }
-
 .tabela {
-    border: solid 1px black;
+    width: 90vw;
 }
 
+
 .tabela td {
-    border: solid 1px black;
-    padding: 10px;
+    border-bottom: solid 1px black;
+    padding: 20px;
 }
 .tabela th {
     border: solid 1px black;
+    padding: 20px;
+}
+
+form{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+input, label {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+
+}
+
+input {
+    border-bottom: 2px solid #099c22; 
     padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#esqueceu-senha {
+    text-align: right;
+    display: block;
+
+}
+
+input[type="submit"] {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: white;
+    background-color: #099c22;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d792c;
+    transition: 5s;
+}
+
+
+
+.pageItem {
+    display: inline-block;
+    padding: 5px;
+}
+.pageItem a {
+    text-decoration: none;
 }

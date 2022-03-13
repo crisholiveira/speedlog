@@ -2,13 +2,18 @@
 
     <link rel="stylesheet" href="/stylesheets/produtos.css">
 
+
     <body>
-        <div class="container-principal">
+        <div class="pesquisa">
             <h1>Listagem de produtos:</h1>
             <form action="/produtos/search" class="formulario" method="get">
                 <input type="text" placeholder="Pesquise um produto" name="key">
-                <button type="submit">Buscar</button>
+                <input type="submit" value="Buscar">
             </form>
+        </div>
+
+        <div class="container-principal">
+
             <table class="tabela">
                 <tr>
                     <th>Código</th>
@@ -27,5 +32,13 @@
                     </tr>
                     <% }) %>
             </table>
+
+            <nav class="paginacao">
+                <ul> Página
+                    <% for(let nrPagina = 1; nrPagina <= totalPagina; nrPagina++ ) { %>
+                        <li class="pageItem"><a href="?Page=<%=nrPagina %>"> <%=nrPagina %></a></li>
+                        <% } %>
+                </ul>
+            </nav>
         </div>
     </body>
