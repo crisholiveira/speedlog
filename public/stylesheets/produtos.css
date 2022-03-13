@@ -115,3 +115,30 @@ input[type="reset"]:hover {
 .pageItem a {
     text-decoration: none;
 }
+
+.botao {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: white;
+    background-color: #099c22;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.botao:hover {
+    background-color: #1d792c;
+    transition: 5s;
+}
+
+a {
+    text-decoration: none;    
+    }
+

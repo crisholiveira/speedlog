@@ -7,6 +7,8 @@ router.get('/ver/:id', produtosController.findByCod)
 router.get('/search', produtosController.search)
 router.get('/cadastro', produtosController.create)
 router.post('/cadastro', produtosController.store)
+router.get('/editar/:id', produtosController.edit)
+router.post('/editar/:id', produtosController.update)
 
 
  

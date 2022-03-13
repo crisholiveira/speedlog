@@ -29,6 +29,29 @@ const produtosController = {
         return res.redirect('/produtos')
 
     },
+    edit: async (req, res) => {
+        const {id} = req.params;
+        const produto = await Produto.findByPk(id);
+        return res.render('editarProdutos', {produto})
+
+    },
+    update: async (req, res) => {
+        const {id} = req.params;
+        const {codigo, nome } = req.body;
+        const resultado = await Produto.update({
+            codigo,
+            nome
+        },
+        {
+            where: {
+                id
+            }
+
+        })
+        console.log(resultado)
+        return res.redirect('/produtos')
+
+    },
 
     findByCod: async (req, res) => {
         let { id } = req.params;
