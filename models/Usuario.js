@@ -10,6 +10,7 @@ module.exports = (sequelize, DataType) => {
         setor: DataType.STRING,
         ativo: DataType.INTEGER,
         perfil: DataType.STRING,
+        email: DataType.STRING,
         senha: DataType.STRING
     },{
         tableName: 'usuarios',
