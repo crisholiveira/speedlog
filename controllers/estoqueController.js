@@ -5,3 +5,4 @@ const estoqueController = {
     }
 }
 module.exports = estoqueController
+
