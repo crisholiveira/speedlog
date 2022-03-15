@@ -15,7 +15,7 @@ const produtosController = {
         return res.render('produtos', { produtos, totalPagina })
 
     },
-    create: (req,res) => {
+    create: (req, res) => {
 
         return res.render('cadastroProduto')
     },
@@ -30,26 +30,39 @@ const produtosController = {
 
     },
     edit: async (req, res) => {
-        const {id} = req.params;
+        const { id } = req.params;
         const produto = await Produto.findByPk(id);
-        return res.render('editarProdutos', {produto})
+        return res.render('editarProdutos', { produto })
 
     },
     update: async (req, res) => {
-        const {id} = req.params;
-        const {codigo, nome } = req.body;
-        const resultado = await Produto.update({
+        const { id } = req.params;
+        const { codigo, nome } = req.body;
+        const produto = await Produto.update({
             codigo,
             nome
         },
-        {
+            {
+                where: {
+                    id
+                }
+
+            })
+        console.log(produto)
+        return res.redirect(`/produtos/ver/${id}`)
+
+        /*return res.redirect('/produtos')*/
+
+    },
+
+    destroy: async (req, res) => {
+        const { id } = req.params;
+        const resultado = await Produto.destroy({
             where: {
                 id
             }
 
         })
-        console.log(resultado)
-        return res.redirect('/produtos')
 
     },
 
@@ -67,13 +80,17 @@ const produtosController = {
         let { key } = req.query;
         let { count: total, rows: produtos } = await Produto.findAndCountAll({
             where: {
-                nome: { [Op.like]: `%${key}%`}},
+                [Op.or]: {
+                    nome: { [Op.like]: `%${key}%` },
+                    codigo: { [Op.like]: `%${key}%` }
+                }
+            },
             order: [[`nome`, `ASC`]],
             limit: 10,
             offset: (page - 1) * 10
-        })       
+        })
         let totalPagina = Math.round(total / 10)
-        return res.render('produtos', { produtos, totalPagina })       
+        return res.render('produtos', { produtos, totalPagina })
 
     }
 }
