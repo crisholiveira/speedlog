@@ -81,7 +81,7 @@ const usuariosController = {
                 id: id
             }
         })
-        return res.render('consultarUsuarios', { produto })
+        return res.render('consultarUsuarios', { usuario })
     },
     search: async (req, res) => {
         let { page = 1 } = req.query

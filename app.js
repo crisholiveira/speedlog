@@ -12,7 +12,6 @@ var requisicoesRouter = require('./routes/requisicoes');
 var estoqueRouter = require('./routes/estoque');
 var usuariosRouter = require('./routes/usuarios');
 var produtosRouter = require('./routes/produtos');
-var cadUsuarioRouter = require('./routes/cadUsuario');
 var listaUsuariosRouter = require('./routes/listaUsuarios');
 
 
@@ -37,7 +36,6 @@ app.use('/requisicoes', requisicoesRouter);
 app.use('/estoque', estoqueRouter);
 app.use('/usuarios', usuariosRouter);
 app.use('/produtos', produtosRouter);
-app.use('/cadUsuario', cadUsuarioRouter);
 app.use('/listaUsuarios', listaUsuariosRouter);
 
 
