@@ -9,6 +9,7 @@ router.get('/cadastro', produtosController.create)
 router.post('/cadastro', produtosController.store)
 router.get('/editar/:id', produtosController.edit)
 router.post('/editar/:id', produtosController.update)
+router.get('/excluir/:id', produtosController.consult)
 router.post('/excluir/:id', produtosController.destroy)
 
 

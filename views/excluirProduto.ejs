@@ -8,17 +8,20 @@
             <h1>EXCLUIR PRODUTO</h1>
 
             <form action="/produtos/excluir/<%=produto.id%>?_method=PUT" method="post">
-                <div class="form-group">
-                    <label for="codigo">Código</label>
-                    <input type="text" id="codigo" name="codigo" value="<%= produto.codigo %>">
+                <div class="item">
+                    <ul>
+                        <li> Código: <%= produto.codigo %>
+                        </li>
+                        <li> Nome: <%= produto.nome %>
+                        </li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" value="<%= produto.nome %>">
-                </div>
-                <input id="salvarAlt" type="submit" value="Salvar alterações">
 
+                <div class="btn-cancelar">
+                    <input id="resetar" type="reset" value="Cancelar">
+                    <input id="save" type="submit" value="Excluir">
+                </div>
             </form>
-
         </div>
+        <script src="/js/jsProdutos.js"></script>
     </body>

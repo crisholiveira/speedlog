@@ -34,18 +34,23 @@
                             <a href="/produtos/ver/<%= produto.id %>" class="botao">Ver</a>
                             <a href="/produtos/editar/<%= produto.id %>" class="botao">Editar</a>
                             <a href="/produtos/excluir/<%= produto.id %>" class="botao">Excluir</a>
+
+                           <!-- <a href="/produtos/excluir/<%= produto.id %>" class="botao">Excluir</a>-->
                         </td>
                     </tr>
                     <% }) %>
             </table>
 
             <nav class="paginacao">
-                <ul> 
-                    <% for(let nrPagina = 1; nrPagina <= totalPagina; nrPagina++ ) { %>
-                        <li class="pageItem"><a href="?page=<%=nrPagina %>"> <%=nrPagina %></a></li>
+                <ul>
+                    <% for(let nrPagina=1; nrPagina <=totalPagina; nrPagina++ ) { %>
+                        <li class="pageItem"><a href="?page=<%=nrPagina %>">
+                                <%=nrPagina %>
+                            </a></li>
                         <% } %>
                 </ul>
             </nav>
         </div>
+        
         <script src="/js/jsProdutos.js"></script>
     </body>

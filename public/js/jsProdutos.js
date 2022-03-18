@@ -16,3 +16,5 @@ adicionar.addEventListener("click", function (e) {
     window.location.href = '/produtos/cadastro'
     
 })
+
+

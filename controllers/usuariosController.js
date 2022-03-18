@@ -63,14 +63,19 @@ const usuariosController = {
 
     },
 
-    destroy: async (req, res) => { /*concluir o destroy*/
+    consult: async (req, res) => {
         const { id } = req.params;
-        const resultado = await Usuario.destroy({
-            where: {
-                id
-            }
+        const usuario = await Usuario.findByPk(id);
+        return res.render('excluirUsuario', { usuario })
+    },
+
+    destroy: async (req, res) => {
+        const { id } = req.params;
+        const usuario = await Usuario.destroy({
+            where: { id }
 
         })
+        return res.redirect('/usuarios')
 
     },
 

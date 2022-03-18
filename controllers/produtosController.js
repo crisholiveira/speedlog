@@ -55,14 +55,19 @@ const produtosController = {
 
     },
 
+    consult: async (req, res) => {
+        const { id } = req.params;
+        const produto = await Produto.findByPk(id);
+        return res.render('excluirProduto', { produto })
+    },
+
     destroy: async (req, res) => {
         const { id } = req.params;
-        const resultado = await Produto.destroy({
-            where: {
-                id
-            }
+        const produto = await Produto.destroy({
+            where: { id }
 
         })
+        return res.redirect('/produtos')
 
     },
 
